@@ -36,7 +36,7 @@ const links = [
   { href: "about.html", text: "ABOUT US" },
   { href: "about.html#testimonials", text: "TESTIMONIALS" },
   { href: "employer.html", text: "WHY US" },
-  { href: "/jobs.html", text: "JOBS" },
+  { href: "https://www.careers-page.com/gaprecruitment", text: "JOBS" },
   { href: "/blog.html", text: "BLOG" },
   { href: "navPipe.html", text: "|" },
   { href: "contact.html", text: "CONTACT US" },

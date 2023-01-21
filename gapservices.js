@@ -329,7 +329,7 @@ jobseekerMoreDiv.classList.add("jobseekerMoreDiv", "flex");
 const listedJobs = document.createElement("a");
 listedJobs.className = "actionBtnEmployer";
 
-listedJobs.href = "gapjobs.html";
+listedJobs.href = "https://www.careers-page.com/gaprecruitment";
 listedJobs.textContent = "SEE LISTED JOBS";
 
 const actionBtnEmployer = document.createElement("a");
