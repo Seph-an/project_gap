@@ -34,7 +34,10 @@ for (let i = 0; i < copyWords.length; i++) {
 const homePageBtnsDiv = document.createElement("div");
 homePageBtnsDiv.classList.add("homePageBtnsDiv", "flex");
 
-const homeBtns = ["EMPLOYER", "JOB SEEKER"];
+const homeBtns = [
+  { name: "EMPLOYER", link: "employer.html" },
+  { name: "JOB SEEKER", link: "gapservices.html" },
+];
 
 function removeLastWord(element) {
   let words = element.split(" ");
@@ -45,13 +48,11 @@ function removeLastWord(element) {
 }
 
 for (let i = 0; i < homeBtns.length; i++) {
-  const homeBtnDiv = document.createElement("div");
-  const homeBtnClass = removeLastWord(homeBtns[i]);
+  const homeBtnDiv = document.createElement("a");
+  homeBtnDiv.href = homeBtns[i].link;
+  const homeBtnClass = removeLastWord(homeBtns[i].name);
   homeBtnDiv.classList.add("homeBtnDiv", "flex", homeBtnClass);
-  const homeBtnDivWords = document.createElement("div");
-  //   homeBtnDivWords.className = "homeBtnDivWords";
-  homeBtnDivWords.textContent = homeBtns[i];
-  homeBtnDiv.appendChild(homeBtnDivWords);
+  homeBtnDiv.textContent = homeBtns[i].name;
   homePageBtnsDiv.appendChild(homeBtnDiv);
 }
 
@@ -63,39 +64,46 @@ const partners = document.createElement("div");
 partners.id = "partners";
 partners.classList.add("partners", "flex");
 
-const clientsDiv = document.createElement("div");
-clientsDiv.className = "clients";
-clientsDiv.id = "clients";
+const marquee = document.createElement("div");
+marquee.classList.add("marquee");
 
-for (let i = 0; i < 15; i++) {
-  const clientDiv = document.createElement("div");
-  clientDiv.className = "client";
-  clientDiv.textContent = i;
-  clientsDiv.appendChild(clientDiv);
-}
+const marqueeContent = document.createElement("ul");
+marqueeContent.classList.add("marquee-content", "flex");
 
-const footerDiv = document.createElement("div");
-footerDiv.classList.add("footerDiv", "flex");
-
-const footers = [
-  { href: "/terms.html", text: "Terms & Conditions" },
-  { href: "#", text: "|" },
-  { href: "all.html", text: "All Rights Reserved" },
+const clients = [
+  { id: "alliance", src: "alliance.svg", height: "131px" },
+  { id: "carsRus", src: "carsRus.svg", height: "46px" },
+  { id: "chloride", src: "chloride.svg", height: "100px" },
+  { id: "charcon", src: "charcon.svg", height: "70px" },
+  { id: "harmony", src: "harmony.svg", height: "100px" },
+  { id: "glory", src: "glory.svg", height: "97px" },
+  { id: "golden", src: "golden.svg", height: "90px" },
+  { id: "muhammed", src: "muhammed-n.svg", height: "98px" },
+  { id: "riana", src: "riana.svg", height: "77px" },
+  { id: "robstar", src: "robstar.svg", height: "53px" },
+  { id: "silent", src: "silent.svg", height: "90px" },
+  { id: "yellaw", src: "yellaw.svg", height: "100px" },
+  { id: "rochman", src: "rochman.svg", height: "83px" },
+  { id: "nyumba", src: "nyumba.svg", height: "65px" },
+  { id: "gamma", src: "gamma.svg", height: "72px" },
 ];
 
-for (let i = 0; i < footers.length; i++) {
-  const footer = document.createElement("a");
-  footer.href = footers[i].href;
-  footer.textContent = footers[i].text;
-  let footerClass = "";
-  if (i == 1) {
-    footerClass = "footerPipe";
-  } else {
-    footerClass = removeLastWord(footers[i].text);
-  }
-  footer.classList.add("footer", footerClass);
-  footerDiv.append(footer);
+for (let i = 0; i < clients.length; i++) {
+  const li = document.createElement("li");
+  const image = document.createElement("img");
+  image.setAttribute("src", `imgs/clients/${clients[i].src}`);
+  image.setAttribute("alt", "partner");
+  image.setAttribute("height", clients[i].height);
+  image.setAttribute("width", 100);
+  li.appendChild(image);
+  marqueeContent.appendChild(li);
 }
+// for (let i = 0; i < 4; i++) {
+//   const li = marqueeContent.querySelectorAll("li")[i];
+//   const newLi = li.cloneNode(true);
+//   marqueeContent.appendChild(newLi);
+// }
+marquee.appendChild(marqueeContent);
 
 container.append(homeContent);
 homeContent.append(
@@ -103,59 +111,22 @@ homeContent.append(
   homePageCopyDiv,
   homePageBtnsDiv,
   partnersTitle,
-  partners,
+  marquee,
   footerDiv
 );
 homePageTitleDiv.append(homePageTitle);
-partners.append(clientsDiv);
 
-// const clientsDiv2 = document.querySelector(".clients");
-// const clientDivs2 = clientsDiv2.querySelectorAll(".client");
+const root = document.documentElement;
+//below code enables us know displayed elements, so as to know the right num to duplicate
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
+  "--marquee-elements-displayed"
+);
+const marqueeContents = document.querySelector(".marquee-content");
 
-// let currentIndex = 0;
+root.style.setProperty("--marquee-elements", marqueeContents.children.length);
 
-// setInterval(() => {
-//   clientsDiv2.scrollTo({
-//     top: 0,
-//     left: currentIndex * clientsDiv2.offsetWidth,
-//     behavior: "smooth",
-//   });
-//   currentIndex = (currentIndex + 1) % clientDivs2.length;
-//   if (currentIndex === 0) {
-//     clientsDiv2.scrollTo({
-//       top: 0,
-//       left: 0,
-//       behavior: "auto",
-//     });
-//   }
-// }, 2000);
-//----------------------------------------------------------------
-
-// Set the initial position of the slider
-let sliderPosition = 0;
-
-// Set the speed at which the slider should move
-let sliderSpeed = 1;
-
-// Get a reference to the parent element
-let clients = document.getElementById("clients");
-
-// Get a reference to all the client elements
-let clientElements = clients.getElementsByClassName("client");
-
-// Function to move the slider
-function moveSlider() {
-  // Increment the slider position by the slider speed
-  sliderPosition += sliderSpeed;
-
-  // If the slider has reached the end of the container, reset the position
-  if (sliderPosition > clients.offsetWidth) {
-    sliderPosition = 0;
-  }
-
-  // Update the position of the clients
-  clients.style.left = -sliderPosition + "px";
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
+  marqueeContents.appendChild(marqueeContents.children[i].cloneNode(true));
 }
 
-// Set an interval to continuously move the slider
-setInterval(moveSlider, 50);
+//----------------------------------------------------------------

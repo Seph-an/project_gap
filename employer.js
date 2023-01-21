@@ -1,7 +1,3 @@
-//function to create HTML elements
-const createDiv = () => document.createElement("div");
-const createP = () => document.createElement("p");
-//--------------------------------------------------------
 const employer = createDiv();
 employer.classList.add("employer", "flex");
 
@@ -56,7 +52,6 @@ const actionWords = [
   "|",
   "clskskiw@gaprecruitment.com",
 ];
-
 for (let i = 0; i < actionWords.length; i++) {
   const actionWord = createP();
   actionWord.textContent = actionWords[i];
@@ -91,4 +86,4 @@ employer.append(
   actionDiv,
   actionBtnEmployer
 );
-document.querySelector("#body-overlay").appendChild(employer);
+document.querySelector("#body-overlay").append(employer, sectionC);

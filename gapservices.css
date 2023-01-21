@@ -1,0 +1,314 @@
+body{
+    background-color: var(--secondary-color);
+    font-family: var(--primary-font-light-alt);
+
+}
+#body-overlay{
+    background: rgba(0, 0, 0, 0);
+}
+.jobseekerUpload{
+    display: none;
+}
+.jobseekerUpload-on{
+    display: flex;
+    overflow-y: scroll;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.68);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    /* transition: 3s; */
+    /* transform: translateY(1%); */
+}
+/* ---------------Toggled form------------------------ */
+.seekerHeaderDiv{
+    width: 100%;
+    padding: 1.25em;
+    justify-content: flex-end;
+}
+.formContainerCloseDiv{
+    gap: .5em;
+    cursor: pointer;
+}
+.formClose{
+    background-image: url(imgs/close-l.svg);
+    width: 3.375em;
+    height: 3.5em;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+.closeContainer{
+    color: var(--primary-color);
+    letter-spacing: 0.1875em;
+}
+.formArea{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    background: white;
+    border-radius: 20px;
+    gap: 1em;
+}
+.formTermsDiv{
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.formAreaTitle{
+    font-size: 24px;
+    font-family: var(--primary-font-bold-alt);
+}
+.formAreaInstruction{
+    margin-bottom:1em ;
+    color: #FF5574;
+}
+/* .inputHolder{
+    width:300px;
+} */
+/* .inputHolder label{
+    margin-left:-12px ;
+} */
+.inputHolder label .labelStyle {
+    background: #FFF;
+    font-weight: bold;
+    padding: 0 0.3125em;
+    position: relative;
+    font-size: 0.875em;
+    color: #343637;
+  }
+.inputHolder input {
+    width:15.625em;
+    /* width:250px; */
+    font-size: 1em;
+    height: 2.5em;
+    margin-top: -0.625em;
+    /* z-index: -1; */
+    padding: 0.625em 1.25em;
+    border-radius: 0.625em;
+    outline: none;
+    border: 0.5px solid var(--primary-color);
+    cursor: pointer;
+    /* color: #4DAAFF; */
+
+  }
+  .inputHolder input:hover, .inputHolder input:focus {
+    border: 0.5px solid orange;
+}
+/* #services{
+    overflow-x: scroll;
+} */
+.termTitle{
+    font-family: var(--primary-font-medium-alt);
+    font-size: var(--font-size-std);
+    margin-bottom: 0.625em;
+}
+.termsDiv{
+    align-items: flex-start;
+    /* padding: 1em; */
+    gap: .5em;
+    width: 19.375em;
+}
+.termDiv{
+    align-items: center;
+    gap: .5em;
+    font-size: 14px;
+}
+.termDiv div {
+    align-self: flex-start;
+    margin-top: 0.3125em;
+}
+.termDiv p{
+    max-width: 17.5em;
+}
+
+  .form{
+    gap: 1.5em;
+  }
+  .acceptDiv{
+    align-items: center;
+    gap: 0.625em;
+  }
+  .pay{
+    padding: 0.625em 0;
+    width: 230px;
+    font-size: 16px;
+    background: var(--primary-color);
+    /* text-align: center; */
+    color: black;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+    font-family: var(--primary-font-bold-alt);
+    border: none;
+    transition: .3s ease-in-out;
+  }
+  .pay:hover{
+    background: #FF5574;
+  }
+/* ---------------END Toggled form------------------------ */
+
+#jobseeker{
+    color: #FFFFFF;
+}
+.jobseekerHeader{
+    font-family: var(--primary-font-bold-alt);
+    color: var(--primary-color);
+    font-size: var(--font-size-llarge);
+    word-spacing: 0.1875em;
+}
+.jobseekerHeaderCopy,.servicesCopy{
+    font-size: var(--font-size-std);
+    max-width: 80%;
+    text-align: center;
+
+}
+.servicesHeader{
+    font-family: var(--primary-font-bold-alt);
+    font-size: var(--font-size-large);
+    letter-spacing: 1px;
+    margin:1em 0 0.2em 0;
+    /* color: mediumslateblue; */
+    color: var(--primary-color);
+}
+#servicesGrid{
+    margin: 1.5em 0 2em 0;
+    width: 80%;
+    grid-template-columns: repeat(auto-fill, 18.75em);
+    justify-content: space-evenly;
+    row-gap:2em;
+}
+.pack{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    height: 23.125em;
+    color: var(--secondary-color);
+    position: relative;
+}
+.packHeaderDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.5em 0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.graduatePackHeaderDiv{
+    background: #D3B714;
+}
+.packHeader{
+    color: black;
+}
+.servicesDiv{
+    width: 100%;
+    padding: 0 1em;
+    margin-top: 5.5em;
+    gap: 0.5em;
+}
+.serviceDiv{
+    width: 100%;
+    align-items: center;
+    gap: 0.75em;
+}
+.serviceBtn{
+    width: 80%;
+    background: #D3B714;
+    padding: .5em;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 1.5em;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+    font-family: var(--primary-font-bold-alt);
+    transition: .3s ease-in-out;
+}
+.serviceBtn:hover{
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.regularPackHeaderDiv{
+    background: var(--primary-color);
+    height: 4.6em;
+    justify-content: center;
+}
+.serviceBtnR{
+    background: var(--primary-color);
+}
+.executivePackHeaderDiv{
+    background:bisque;
+    height: 4.6em;
+    justify-content: center;
+}
+.serviceBtnE{
+    background:bisque;
+}
+
+.expressPackHeaderDiv,.serviceBtnEx{
+    background: #4DAAFF;
+}
+
+.europassServicesDiv .serviceDivEU:nth-child(2) .serviceLabelEU{
+    max-width: 241px;
+}
+.europassHeaderDiv,.serviceBtnEu{
+    background: #FF5574;
+}
+.atsHeaderDiv{
+    background: #30FF5D;
+    height: 4.6em;
+    justify-content: center;
+}
+.atsServicesDiv .serviceDivATS:nth-child(2) .serviceLabelATS{
+    max-width: 241px;
+}
+.serviceBtnAt{
+    background: #30FF5D;
+}
+.bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+.check,.serviceDiv input{
+    cursor: pointer;
+}
+.jobseekerMoreDiv{
+    margin: 2em 0;
+    gap: 2em;
+}
+.jobseekerMoreDiv a {
+    padding: 1em 0;
+    color: black;
+    border-radius: 1.875em;
+    letter-spacing: 0.125em;
+    font-family: var(--primary-font-bold-alt);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+    transition: .3s ease-in-out;
+}
+.jobseekerMoreDiv a:hover{
+    background: #FF5574;
+    color: #FFFFFF;
+}
+/* ---------------------------------------- */
+.socialHeader{
+    background: none;
+  }
+.footerDiv{
+    margin-top: 0;
+}
+.footer{
+  color: var(--secondary-color);
+}
+
+@media(max-width: 855px){
+   .formAreaTerms{
+    order: 2;
+}
+.formDiv{
+    order: 1;
+}
+}

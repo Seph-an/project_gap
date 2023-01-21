@@ -1,52 +1,20 @@
-/* @font-face {
-    font-family: "Roboto-Thin";
-    src: url("Roboto/Roboto-Thin.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "Roboto-Black";
-    src: url("Roboto/Roboto-Black.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "Roboto-Light";
-    src: url("Roboto/Roboto-Light.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Roboto-Medium";
-    src: url("Roboto/Roboto-Medium.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Roboto-Regular";
-    src: url("Roboto/Roboto-Regular.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Roboto-Bold";
-    src: url("Roboto/Roboto-Bold.ttf") format("truetype");
-  }
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} */
 body{
     background-color: #1E2529;
+}
+#body-overlay{
+    background: rgba(0, 0, 0, 0);
 }
 .employer{
     width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 2em;
-    margin-top: 3em;
-    
+    margin-top: 2em;
 }
 .strategiesTitle, .employerTitle{
-    color: #54D5D8;
+    color: var(--primary-color);
     font-size: 28px;
     font-family: "Roboto-Bold";
-    /* text-align: center; */
-    /* margin: 30px 0; */
 }
 .employerCopy{
     color: #FFFFFF;
@@ -55,11 +23,6 @@ body{
     text-align: center;
     font-size: 24px;
 }
-.strategiesTitle{
-    /* color: #FFFFFF; */
-    /* font-family: "Roboto-Bold"; */
-    /* text-align: center; */
-}
 #strategies{
     width: 80%;
     padding: 10px;
@@ -67,16 +30,13 @@ body{
 }
 #strategies .strategy:nth-child(even) {
     border: 2px solid #96979B;
-    color: #54D5D8;
+    color: var(--primary-color);
 }
-
 #strategies .strategy:nth-child(odd) {
-    border: 2px solid #54D5D8;
+    border: 2px solid var(--primary-color);
     color: #FFFFFF;
 }
-
 .strategy{
-    /* background: coral; */
     height: 195px;
     width: 180px;
     align-items: center;
@@ -89,49 +49,14 @@ body{
     width: 80%;
     text-align: center;
 }
-.actionDiv{
-    position: relative;
-    /* margin: 30px 0; */
-    /* text-align: center; */
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
+.socialHeader{
+    background: none;
+  }
+.footerDiv{
+    margin-top: 0;
 }
-.glitter{
-    position: absolute;
-    background-image: url(imgs/glitter.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* padding: 1px; */
-    width: 173px;
-    height: 83px;
-    left: 280px;
-}
-.employerContact{
-    color: #FFFFFF;
-    font-size: 24px;
-    font-family: "Roboto-Regular";
-    /* word-spacing: .3125em; */
-    
-}
-.contactNumber1{
-    color: #54D5D8;
-}
-.contactPipe1{
-    font-size: 28px;
-}
-.actionBtnEmployer{
-    padding: 10px;
-    background-color: #54D5D8;
-    font-family: "Roboto-Bold";
-    text-decoration: none;
-    color: #001A72;
-    font-size: 18px;
-    border-radius: 20px;
-    width: 20%;
-    /* margin: 30px auto; */
-    text-align: center;
+.footer{
+  color: var(--secondary-color);
 }
 .flex{
     display: flex;
