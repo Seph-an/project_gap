@@ -1,0 +1,34 @@
+{
+  "name": "project_gap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seph-an/project_gap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seph-an/project_gap/issues"
+  },
+  "homepage": "https://github.com/Seph-an/project_gap#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.2.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.0",
+    "nodemon": "^2.0.20"
+  }
+}
