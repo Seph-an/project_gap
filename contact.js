@@ -150,3 +150,54 @@ for (let i = 0; i < contactDivElements.length; i++) {
 contactSection.append(contactHeaderDiv, formImageDiv, contactDiv);
 
 document.querySelector("#body-overlay").append(contactSection, sectionC);
+
+// -----------------------------------------------------------------------------------
+//Actions that happen when form is submitted
+
+const sendBtn = document.querySelector("#formBtn");
+
+const delegateSubmitToBody = document.body;
+delegateSubmitToBody.addEventListener("submit", submitFired);
+//all elements that need submit are handled here
+function submitFired(e) {
+  if (e.target.id === "contactForm") {
+    e.preventDefault();
+    const form = e.target;
+    console.log("event in contact form prevented");
+    const inquirerMail = form.querySelector("#mail").value;
+    const inquirerMessage = form.querySelector("#message").value;
+
+    handleFormSubmitInquiry(inquirerMail, inquirerMessage);
+  }
+}
+//process the values in the backend
+function handleFormSubmitInquiry(mail, message) {
+  console.log("Inquirer handle mail", mail);
+  console.log("Inquirer handle message", message);
+
+  const url = "http://localhost:3000/gap_inquiry";
+
+  const body = {
+    mail: mail,
+    message: message,
+  };
+  const options = {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: { "Content-type": "application/json; charset =UTF-8" },
+  };
+
+  fetch(url, options)
+    .then((res) => {
+      // return res.json();
+      if (res.status == 200) {
+        console.log("SUbmit successful");
+      }
+      console.log("SUbmit out of res");
+      console.log("Status", res.status);
+    })
+    .catch((err) => {
+      console.log("error", err);
+      console.log("error message", err.message);
+    });
+}

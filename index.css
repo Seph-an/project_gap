@@ -106,13 +106,9 @@ body{
     word-spacing: .3125em;
     font-size: 1.5em;
     color: #FFFFFF;
-    /* margin-top: 2em; */
 }
 #partners{
     width: 80%;
-    /* background: rgba(217, 217, 217, 0.33);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px); */
     background: #FFFFFF;
     border-radius: 1.25em;
     overflow: hidden;
@@ -339,13 +335,6 @@ body{
         width: 80%;
         justify-content: space-between;
         gap: 2em;
-    }
-    
-    .homeBtnDiv{
-        /* padding: ; */
-        /* font-size: 1.125em; */
-        /* height: 2.5em;
-        width: 14.625em; */
     }
     #partners{
         width: 95%;

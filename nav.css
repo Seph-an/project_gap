@@ -263,6 +263,15 @@
   width: 250px;
   text-align: center;
   margin: 0 0 2em 0;
+  transition: .5s ease-in-out;
+  border: 1px solid #1E2529;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+
+
+}
+.actionBtnEmployer:hover{
+  background: #e84a8f;
+  color: #FFFFFF;
 }
 
 /* --------------------END Action Contact Styling--------------------------- */
@@ -302,17 +311,18 @@
     }
     .mobile-nav-toggle{
         display: block;
-        position: absolute;
+        /* position: absolute; */
         z-index: 9999;
         background-color: transparent;
         background-image: url("imgs/menu-s.svg");
         background-repeat: no-repeat;
         border: 0;
         width: 4.3125rem;
+        height: 3.8125em;
         /* background-color: red; */
-        aspect-ratio: 1;
-        top:1.5rem;
-        right: 2rem;
+        /* aspect-ratio: 1; */
+        /* top:1.5rem; */
+        /* right: 2rem; */
     }
 
     .mobile-nav-toggle[aria-expanded="true"]{
@@ -346,9 +356,9 @@
 }
 }
 @media(max-width: 430px){
-  .mobile-nav-toggle{
+  /* .mobile-nav-toggle{
     right: 1.5rem;
-}
+} */
   .socialHeaderIcon{
     margin-right: 0.5em;
   }

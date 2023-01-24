@@ -125,12 +125,10 @@ function clickFired(e) {
 
     const servicesInpt = document.querySelector("#services");
     servicesInpt.value = services;
-  } else if (e.target.className === "pay") {
   }
 }
 const delegateSubmitToBody = document.body;
 delegateSubmitToBody.addEventListener("submit", submitFired);
-
 //all elements that need submit are handled here
 function submitFired(e) {
   if (e.target.classList.contains("form")) {
@@ -151,26 +149,6 @@ function submitFired(e) {
     }
   }
 }
-// handleForm();
-// function handleForm() {
-//   const form = document.querySelector(".pay");
-//   console.log(form);
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   const checkBox = form.querySelector("#acceptCheck");
-//   const term = form.querySelector(".check");
-//   if (!checkBox.checked) {
-//     term.style.color = "red";
-//     setTimeout(() => {
-//       term.style.color = "";
-//     }, 500);
-//     return;
-//   } else {
-//     console.log("terms read");
-//     console.log(form);
-//   }
-// });
-// }
 
 const getServicesPicked = (selectServices) => {
   const selectedServices = [];
