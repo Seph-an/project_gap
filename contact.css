@@ -1,7 +1,6 @@
 body{
     background-color: var(--secondary-color);
     font-family: var(--primary-font-light-alt);
-    /* z-index: 666; */
 
 }
 #body-overlay{
@@ -10,10 +9,9 @@ body{
 }
 #contactSection{
     width: var(--view-width);
-    /* margin: 0 auto; */
     padding: 1.875em 0;
     gap: 2em;
-    z-index: 666;
+    z-index: 100;
 
 }
 .contactHeaderDiv{
@@ -22,7 +20,7 @@ body{
 .contactHeader{
     font-family: var(--primary-font-bold-alt);
     color: var(--primary-color);
-    font-size: var(--font-size-llarge);
+    font-size: calc(var(--font-size-h1-base)*1.2);
     word-spacing: 0.1875em;
 }
 
@@ -154,7 +152,7 @@ min-width: 20.375em;
     color: #FFFFFF;
     font-size: var(--font-size-std);
     padding:1em 0;
-    z-index: 666;
+    z-index: 100;
 }
 .contactDivElement{
     flex: 1;
@@ -257,6 +255,9 @@ min-width: 20.375em;
 
 }
 @media(max-width: 760px){
+    .contactHeader{
+        font-size: var( --font-size-h1-base);
+    }
     .fromDiv{
         width: 90%;
     }
@@ -271,20 +272,6 @@ min-width: 20.375em;
     #formImageDiv{
         width: 100%;
     }
-    .contactHeader{
-        font-size: var(--font-size-large);
-    }
-    /* .fromDiv{
-        width:21em;
-    } */
-    /* .contactQuizes{
-        background-image: url(imgs/talk-t-s.svg);
-        width: 240px;
-        height: 170px;
-        padding-top: 3%;
-        gap: .625em;
-    } */
-
     #contactDiv{
         width: 90%;
     }

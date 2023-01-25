@@ -2,12 +2,6 @@ html{
     font-size: 16px;
     font-family: var(--primary-font-light-alt);
 }
-:root{
-    --font-size-base:1rem;
-    --font-size-h2-base:1.5rem;
-    --font-size-h1-base:1.75rem;
-    --card-title:1.125rem
-}
 body{
     background-color: #1E2529;
 }
@@ -20,8 +14,7 @@ body{
     align-items: center;
     gap: 2em;
     padding: 2em 0;
-    /* margin-top: 2em; */
-    /* background: #b2cba0; */
+    /* background: #FFFFFF; */
     background: rgb(196, 255, 213);
 }
 .employerHeader{
@@ -229,7 +222,6 @@ body{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        /* background: red; */
       }
       .employerContact{
         font-size: calc(var(--font-size-base)*1.125);

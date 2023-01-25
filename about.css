@@ -30,9 +30,11 @@ body{
     height: 1.6875em;
 }
 .profileHeader{
-    font-size: var(--font-size-llarge);
-    font-family: var(--primary-font-bold);
+    font-size: calc(var(--font-size-h1-base)*1.2);
+    /* font-family: var(--primary-font-bold); */
+    font-family: var(--primary-font-bold-alt);
     text-align: center;
+    color: #000;
 }
 .profileUnderHeader{
     font-size: var(--font-size-xstd);
@@ -240,7 +242,12 @@ body{
 .footer{
     color: var(--secondary-color);
 }
-
+@media(max-width: 600px){
+    .profileHeader{
+        font-size: var(--font-size-h1-base);
+    }
+   
+}
 @media(max-width: 1170px){
     #testimonies{
         /* margin: 3.125em 0;
