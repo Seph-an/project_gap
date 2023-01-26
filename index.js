@@ -71,21 +71,24 @@ const marqueeContent = document.createElement("ul");
 marqueeContent.classList.add("marquee-content", "flex");
 
 const clients = [
-  { id: "alliance", src: "alliance.svg", height: "131px" },
-  { id: "carsRus", src: "carsRus.svg", height: "46px" },
-  { id: "chloride", src: "chloride.svg", height: "100px" },
-  { id: "charcon", src: "charcon.svg", height: "70px" },
-  { id: "harmony", src: "harmony.svg", height: "100px" },
-  { id: "glory", src: "glory.svg", height: "97px" },
-  { id: "golden", src: "golden.svg", height: "90px" },
-  { id: "muhammed", src: "muhammed-n.svg", height: "98px" },
-  { id: "riana", src: "riana.svg", height: "77px" },
-  { id: "robstar", src: "robstar.svg", height: "53px" },
-  { id: "silent", src: "silent.svg", height: "90px" },
-  { id: "yellaw", src: "yellaw.svg", height: "100px" },
-  { id: "rochman", src: "rochman.svg", height: "83px" },
-  { id: "nyumba", src: "nyumba.svg", height: "65px" },
-  { id: "gamma", src: "gamma.svg", height: "72px" },
+  { id: "art", src: "art.svg" },
+  { id: "sweden", src: "sweden.svg" },
+  { id: "dutch", src: "dutch.svg" },
+  { id: "ned", src: "ned.svg" },
+  { id: "golden", src: "golden.svg" },
+  { id: "chloride", src: "chloride.svg" },
+  { id: "stani", src: "stani.svg" },
+  { id: "charcon", src: "charcon.svg" },
+  { id: "harmony", src: "harmony.svg" },
+  { id: "ens3", src: "ens3.svg" },
+  { id: "muhammed", src: "muhammed.svg" },
+  { id: "riana", src: "riana.svg" },
+  { id: "tot", src: "tot.svg" },
+  { id: "roch", src: "roch.svg" },
+  { id: "silent", src: "silent.svg" },
+  { id: "glory", src: "glory.svg" },
+  { id: "robstar", src: "robstar.svg" },
+  { id: "nyumba", src: "nyumba.svg" },
 ];
 
 for (let i = 0; i < clients.length; i++) {
@@ -93,8 +96,8 @@ for (let i = 0; i < clients.length; i++) {
   const image = document.createElement("img");
   image.setAttribute("src", `imgs/clients/${clients[i].src}`);
   image.setAttribute("alt", "partner");
-  image.setAttribute("height", clients[i].height);
-  image.setAttribute("width", 100);
+  image.setAttribute("height", "auto");
+  image.setAttribute("width", 150);
   li.appendChild(image);
   marqueeContent.appendChild(li);
 }
