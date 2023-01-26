@@ -73,7 +73,6 @@ marqueeContent.classList.add("marquee-content", "flex");
 const clients = [
   { id: "art", src: "art.svg" },
   { id: "sweden", src: "sweden.svg" },
-  { id: "dutch", src: "dutch.svg" },
   { id: "ned", src: "ned.svg" },
   { id: "golden", src: "golden.svg" },
   { id: "chloride", src: "chloride.svg" },
